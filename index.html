@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="main.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <form novalidate>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required/>
+                <span class="error emailError"></span>
+            </div>
+            <div>
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" required minlength="3" pattern="([a-zA-Z ]+)|([Ѐ-ё ]+)"/>
+                <span class="error countryError"></span>
+            </div>
+            <div>
+                <label for="zipCode">ZIP Code:</label>
+                <input type="number" id="zipCode" name="zipCode" min="100000" required/>
+                <span class="error zipCodeError"></span>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <div class="password-div">
+                    <input type="password" id="password" name="password" required minlength="6"/>
+                    <input type="checkbox" class="show-password-button">
+                    <div>Show Password</div>
+                </div>
+                <span class="error passwordError"></span>
+            </div>
+            <div>
+                <label for="confirmPassword">Confirm password:</label>
+                <div class="password-div">
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        required
+                    />
+                    <input type="checkbox" class="show-password-button">
+                    <div>Show Password</div>
+                </div>
+                <span class="error confirmPasswordError"></span>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
