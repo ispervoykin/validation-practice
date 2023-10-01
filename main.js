@@ -20,7 +20,7 @@ const countryError = (() => {
     const valueMissing = () => "You need to enter a country name.";
     const typeMismatch = () => "Entered value needs to be a country name.";
     const tooShort = (length) => `Country name should be at least ${inputFields.country.minLength} characters; you entered ${length}.`;
-    const patternMismatch = () => "Country name should contain ether English or Russian letters.";
+    const patternMismatch = () => "Country name should contain either English or Russian letters.";
 
     return {
         valueMissing,
